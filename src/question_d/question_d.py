@@ -1,1 +1,2 @@
-#write functions here, don't add input('') statements here!
+def get_fahrenheit(celsius_temperature):
+    return (9/5) * celsius_temperature + 32
