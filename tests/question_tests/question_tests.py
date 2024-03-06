@@ -3,6 +3,7 @@ import unittest
 
 #follow this example to add questions b, c, and d for testing including their functions
 from src.question_a.question_a import test_config, get_sum_of_evens
+from src.question_b.question_b import get_random_number
 
 class Test_Config(unittest.TestCase):
 
@@ -13,3 +14,7 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(get_sum_of_evens(11), 30)
         self.assertEqual(get_sum_of_evens(10), 30)
         self.assertEqual(get_sum_of_evens(8), 20)
+
+    def test_get_random_number(self):
+        number = get_random_number()
+        self.assertTrue(0 < number and number < 6)
