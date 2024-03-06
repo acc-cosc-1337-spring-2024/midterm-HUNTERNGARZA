@@ -1,1 +1,6 @@
-#write functions here, don't add input('') statements here!
+def is_prime(number):
+    for n in range(2, number):
+        if (number%n == 0):
+            return False
+        
+    return True

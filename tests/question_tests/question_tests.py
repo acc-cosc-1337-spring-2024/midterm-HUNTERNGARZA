@@ -4,6 +4,7 @@ import unittest
 #follow this example to add questions b, c, and d for testing including their functions
 from src.question_a.question_a import test_config, get_sum_of_evens
 from src.question_b.question_b import get_random_number
+from src.question_c.question_c import is_prime
 
 class Test_Config(unittest.TestCase):
 
@@ -18,3 +19,8 @@ class Test_Config(unittest.TestCase):
     def test_get_random_number(self):
         number = get_random_number()
         self.assertTrue(0 < number and number < 6)
+
+    def test_is_prime(self):
+        self.assertFalse(is_prime(4))
+        self.assertTrue(is_prime(5))
+        self.assertTrue(is_prime(11))
